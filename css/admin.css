@@ -1,9 +1,0 @@
-#adminmenu #menu-posts-event div.wp-menu-image:before,
-#adminmenu #menu-posts-customer div.wp-menu-image:before,
-#adminmenu #menu-posts-team div.wp-menu-image:before,
-#adminmenu #menu-posts-vehicle div.wp-menu-image:before,
-#adminmenu #menu-posts-tracker div.wp-menu-image:before,
-#adminmenu #menu-posts-quotation div.wp-menu-image:before{
-	content: "\f119";
-	color: #e14d43;
-}
