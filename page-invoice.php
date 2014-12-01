@@ -33,7 +33,6 @@ if(count($uri) == 5){
 	$quotationStatus = get_terms('quotationstatus', array('hide_empty'=>false));
 	$currCustomer = get_post($customerId);	
 
-
 ?>
 
 
@@ -194,18 +193,18 @@ if(count($uri) == 5){
 
 	</div>
 
-<!-- <a data-toggle="modal" data-target="#sigModal" class="btn btn-primary" href="#draw-it"> Add Signature</a> -->
+<a data-toggle="modal" data-target="#sigModal" class="btn btn-primary" href="#draw-it"> Add Signature</a>
 
 
 
 
-<!-- 		<div class="modal fade" id="sigModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="sigModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 
 			      <div class="modal-header">     
 			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			        <h4 class="modal-title" id="myModalLabel">Signature</h4>
+			        <h4 class="modal-title" id="myModalLabel">Draw your signature</h4>
 			      </div>
 
 				      <div class="modal-body">
@@ -213,7 +212,18 @@ if(count($uri) == 5){
 
 
 
+				  <form method="POST" action="" class="sigPad">
 
+				   
+				    <ul class="sigNav">
+				      <li class="clearButton"><a href="#clear">Clear</a></li>
+				    </ul>
+
+				    <div class="sig sigWrapper">
+				      <div class="typed"></div>
+				      <canvas class="pad" width="198" height="55"></canvas>
+				      <input type="hidden" name="output" class="output">
+				    </div>
 
 
 
@@ -224,18 +234,21 @@ if(count($uri) == 5){
 			        <a href="#" class="btn btn-default" data-dismiss="modal" id="cancel">Cancel</a>
 			        <button name="submit_sig" type="submit" class="btn btn-primary" >Save changes</button>
 			      </div>
+			      
+ 				 </form>
+
 
 		    </div>
 		  </div>
 		</div>
- -->
 
 
 
 
-<!-- <a class="btn btn-primary" style="" id="addSignature">Add Signature</a> -->
+
 
 <?php
+
 
     if (isset($_POST['output'])){
 
@@ -250,7 +263,7 @@ if(count($uri) == 5){
         }
 ?>
 
-  <script src="<?php echo bloginfo('template_directory');?>/signature/jquery.signaturepad.js"></script>
+
 
   <script>
     $(document).ready(function() {
@@ -258,23 +271,23 @@ if(count($uri) == 5){
     });
   </script>
   
-  <script src="<?php echo bloginfo('template_directory');?>/signature/assets/json2.min.js"></script>
+
 
 <?php 
 
-var_dump($quotation);
+// var_dump($quotation);
 
-echo 'Current Customer Type : '.$currCustomerType; var_dump($currCustomerType);
+// echo 'Current Customer Type : '.$currCustomerType; var_dump($currCustomerType);
 
-var_dump($quotation->post_content);
+// var_dump($quotation->post_content);
 
-var_dump($currCustomerType);
+// var_dump($currCustomerType);
 
-var_dump($currCustomer); 
+// var_dump($currCustomer); 
 
-var_dump($price);
+// var_dump($price);
 
-echo 'Status Slug: '.$status->slug;
+// echo 'Status Slug: '.$status->slug;
 
 
 ?>

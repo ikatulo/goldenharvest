@@ -53,7 +53,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 
-    <link href="<?php echo bloginfo('template_directory');?>/signature/assets/jquery.signaturepad.css" rel="stylesheet">
+  <!--   <link href="<?php echo bloginfo('template_directory');?>/signature/assets/jquery.signaturepad.css" rel="stylesheet"> -->
     <!--[if lt IE 9]>
       <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js" type="text/javascript"></script>
       <script src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js" type="text/javascript"></script>
@@ -73,7 +73,9 @@
     <script src="<?php echo get_template_directory_uri();?>/js/fullcalendar.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/js/jquery-ui-timepicker-addon.min.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/js/accounting.min.js"></script>
-    <script src="<?php echo get_template_directory_uri();?>/myjs/myapp.js"></script>
+
+    <script src="<?php echo get_template_directory_uri();?>/signature/jquery.signaturepad.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/signature/assets/json2.min.js"></script>
 
     <script type="text/javascript">
         var themeDir = "<?php echo get_template_directory_uri(); ?>";
